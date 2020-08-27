@@ -6,9 +6,9 @@ public class CamRotate : MonoBehaviour
 {
     public GameObject targetObject;
     private float targetAngle = 0;
-    const float rotationAmount = 1.5000000f;
-    public float rDistance = 1.0000000f;
-    public float rSpeed = 1.0f;
+    const float rotationAmount = 5.0000000f;
+    //public float rDistance = 1.0000000f;
+    //public float rSpeed = 1.0f;
 
     // Update is called once per frame
     void Update() {
@@ -24,14 +24,16 @@ public class CamRotate : MonoBehaviour
         if (targetAngle != 0) {
             Rotate();
         }
+
+        Debug.Log(targetAngle);
     }
 
     protected void Rotate() {
 
-        float step = rSpeed * Time.deltaTime;
-        float orbitCircumfrance = 2F * rDistance * Mathf.PI;
-        float distanceDegrees = (rSpeed / orbitCircumfrance) * 360;
-        float distanceRadians = (rSpeed / orbitCircumfrance) * 2 * Mathf.PI;
+        //float step = rSpeed * Time.deltaTime;
+        //float orbitCircumfrance = 2F * rDistance * Mathf.PI;
+        //float distanceDegrees = (rSpeed / orbitCircumfrance) * 360;
+        //float distanceRadians = (rSpeed / orbitCircumfrance) * 2 * Mathf.PI;
 
         if (targetAngle > 0) {
             transform.RotateAround(targetObject.transform.position, Vector3.up, -rotationAmount);
