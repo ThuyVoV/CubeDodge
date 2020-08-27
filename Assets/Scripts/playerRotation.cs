@@ -18,9 +18,12 @@ public class playerRotation : MonoBehaviour
     }
 
 	private void OnTriggerEnter(Collider collider) {
+
+        //if (!Movement.canTele)
+          //  return;
+
         Vector3 playPos = player.transform.position;
         Vector3 telPos = teleportLocation.transform.position;
-        //player.transform.Rotate(0, 90, 0);
         player.transform.position = new Vector3(telPos.x, telPos.y + playPos.y, telPos.z);
         
 	}

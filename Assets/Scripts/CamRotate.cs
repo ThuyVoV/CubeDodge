@@ -25,7 +25,7 @@ public class CamRotate : MonoBehaviour
             Rotate();
         }
 
-        Debug.Log(targetAngle);
+        //Debug.Log(targetAngle);
     }
 
     protected void Rotate() {
